@@ -15,24 +15,44 @@ public class LeetCode_21 {
     }
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        if (l1 == null) return l2;
-        if (l2 == null) return l1;
-        ListNode head = null, prev = null, curr = null;
-        ListNode l1_curr = l1, l2_curr = l2;
-        while (l1_curr != null && l2_curr != null) {
-            if (l1_curr.val <= l2_curr.val) {
-                curr = l1_curr;
-                l1_curr = l1_curr.next;
+        ListNode dummyHead = new ListNode(-1);
+        ListNode prev = dummyHead;
+        ListNode p1 = l1, p2 = l2;
+        while (p1 != null && p2 != null) {
+            if (p1.val <= p2.val) {
+                prev.next = p1;
+                p1 = p1.next;
             } else {
-                curr = l2_curr;
-                l2_curr = l2_curr.next;
+                prev.next = p2;
+                p2 = p2.next;
             }
-            if (head == null) head = curr;
-            if (prev != null) prev.next = curr;
-            prev = curr;
+            prev = prev.next;
         }
-        if (l1_curr != null) curr.next = l1_curr;
-        if (l2_curr != null) curr.next = l2_curr;
-        return head;
+        if (p1 != null) prev.next = p1;
+        if (p2 != null) prev.next = p2;
+        return dummyHead.next;
     }
+
+    // 未使用 dummyHead，需要在循环内处理特殊逻辑，较繁琐。
+//    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+//        if (l1 == null) return l2;
+//        if (l2 == null) return l1;
+//        ListNode head = null, prev = null, curr = null;
+//        ListNode l1_curr = l1, l2_curr = l2;
+//        while (l1_curr != null && l2_curr != null) {
+//            if (l1_curr.val <= l2_curr.val) {
+//                curr = l1_curr;
+//                l1_curr = l1_curr.next;
+//            } else {
+//                curr = l2_curr;
+//                l2_curr = l2_curr.next;
+//            }
+//            if (head == null) head = curr;
+//            if (prev != null) prev.next = curr;
+//            prev = curr;
+//        }
+//        if (l1_curr != null) curr.next = l1_curr;
+//        if (l2_curr != null) curr.next = l2_curr;
+//        return head;
+//    }
 }
