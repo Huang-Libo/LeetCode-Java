@@ -12,7 +12,7 @@ public class ListNode {
      * @return 一个 ListNode 实例，即该 List 的头结点
      */
     public static ListNode createList(int[] nums) {
-        ListNode dummyHead = new ListNode(0);
+        ListNode dummyHead = new ListNode(-1);
         ListNode prev = dummyHead;
         for (int i = 0; i < nums.length; i++) {
             ListNode curr = new ListNode(nums[i]);
