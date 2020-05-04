@@ -6,6 +6,11 @@ public class ListNode {
 
     ListNode(int x) { val = x; }
 
+    /**
+     * 通过 int 数组创建一个 List。
+     * @param nums int 数组
+     * @return 一个 ListNode 实例，即该 List 的头结点
+     */
     public static ListNode createList(int[] nums) {
         ListNode head = null, prev = null;
         for (int i = 0; i < nums.length; i++) {
@@ -20,6 +25,10 @@ public class ListNode {
         return head;
     }
 
+    /**
+     * 打印一个 List 中的所有元素。
+     * @param list 该 list 的头结点
+     */
     public static void printList(ListNode list) {
         System.out.println("print list:");
         ListNode current = list;
