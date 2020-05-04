@@ -4,7 +4,7 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    ListNode(int x) { val = x; }
+    public ListNode(int x) { val = x; }
 
     /**
      * 通过 int 数组创建一个 List。
