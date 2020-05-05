@@ -1,5 +1,10 @@
 import DataStructures.ListNode;
 
+/**
+ * 141. 环形链表
+ * 给定一个链表，判断链表中是否有环。
+ * https://leetcode-cn.com/problems/linked-list-cycle/
+ */
 public class LeetCode_141 {
     public static void main(String[] args) {
         LeetCode_141 leetCode_141 = new LeetCode_141();

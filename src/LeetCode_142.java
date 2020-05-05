@@ -2,6 +2,11 @@ import DataStructures.ListNode;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * 142. 环形链表 II
+ * 给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回 null。
+ * https://leetcode-cn.com/problems/linked-list-cycle-ii/
+ */
 public class LeetCode_142 {
     public static void main(String[] args) {
         LeetCode_142 leetCode_142 = new LeetCode_142();
