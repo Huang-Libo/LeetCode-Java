@@ -38,6 +38,12 @@ public class ListNode {
 //        return head;
 //    }
 
+    /**
+     * 创建环形链表。
+     * @param nums 链表的元素
+     * @param pos 链表开始入环的第一个节点
+     * @return 链表的头指针
+     */
     public static ListNode createCycleList(int[] nums, int pos) {
         if (pos < -1) { // 非法值
             return null;
