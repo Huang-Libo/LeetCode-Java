@@ -38,7 +38,7 @@ public class LeetCode_20_valid_parentheses {
         return stack.isEmpty();
     }
 
-    // 方法二：贴一个网友用 python 写的代码，很有创意
+    // 方法二：贴一个网友用 python 写的代码（从代码层面上来说很有创意；如果考虑时间复杂度，可能不太好）
     /*
     class Solution:
     def isValid(self, s):
