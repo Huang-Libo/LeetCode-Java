@@ -1,4 +1,4 @@
-import DataStructures.ListNode;
+import MyDataStructures.ListNode;
 import java.util.HashSet;
 import java.util.Set;
 
