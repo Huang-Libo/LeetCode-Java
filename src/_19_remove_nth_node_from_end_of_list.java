@@ -5,7 +5,6 @@ import MyDataStructures.ListNode;
  * 给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。
  * https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/
  */
-
 public class _19_remove_nth_node_from_end_of_list {
     public static class Solution {
         public ListNode removeNthFromEnd(ListNode head, int n) {
