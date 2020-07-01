@@ -35,6 +35,7 @@ public class _19_remove_nth_node_from_end_of_list {
         int[] nums = new int[]{1,2,3,4,5};
         int n = 2;
         ListNode list = ListNode.createList(nums);
-        solution.removeNthFromEnd(null,n);
+        solution.removeNthFromEnd(list,n);
+//        solution.removeNthFromEnd(null,n);
     }
 }
