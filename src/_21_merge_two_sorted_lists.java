@@ -1,25 +1,25 @@
-import DataStructures.ListNode;
+import MyDataStructures.ListNode;
 
 /**
  * 21. 合并两个有序链表.
  * 将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
  * https://leetcode-cn.com/problems/merge-two-sorted-lists/
  */
-public class LeetCode_21 {
+public class _21_merge_two_sorted_lists {
     public static void main(String[] args) {
         int[] nums1 = new int[]{1, 2, 4};
         int[] nums2 = new int[]{1, 3, 4};
 
         System.out.println("迭代的解法:");
-        Solution_1 solution_1 = new Solution_1();
-        ListNode.printList(solution_1.mergeTwoLists(ListNode.createList(nums1), ListNode.createList(nums2)));
+        Solution1 solution1 = new Solution1();
+        ListNode.printList(solution1.mergeTwoLists(ListNode.createList(nums1), ListNode.createList(nums2)));
 
         System.out.println("递归的解法:");
-        Solution_2 solution_2 = new Solution_2();
-        ListNode.printList(solution_2.mergeTwoLists(ListNode.createList(nums1), ListNode.createList(nums2)));
+        Solution2 solution2 = new Solution2();
+        ListNode.printList(solution2.mergeTwoLists(ListNode.createList(nums1), ListNode.createList(nums2)));
     }
 
-    public static class Solution_2 {
+    public static class Solution2 {
         // 方法二：递归
         // 当 l1 或 l2 等于 null 时，“递”结束，“归”开始。
         public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -35,7 +35,7 @@ public class LeetCode_21 {
         }
     }
 
-    public static class Solution_1 {
+    public static class Solution1 {
         // 方法一：迭代
         public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
             ListNode dummyHead = new ListNode(-1);
