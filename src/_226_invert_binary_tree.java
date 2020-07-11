@@ -1,5 +1,7 @@
 import MyDataStructures.TreeNode;
 
+import java.util.ArrayList;
+
 /**
  * 226. 翻转二叉树
  * 示例：
@@ -42,16 +44,19 @@ public class _226_invert_binary_tree {
     }
 
     public static void main(String[] args) {
-        // 根节点
-        TreeNode root = new TreeNode(4);
-        // 第二层
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(7);
-        // 第三层
-        root.left.left = new TreeNode(1);
-        root.left.right = new TreeNode(3);
-        root.right.left = new TreeNode(6);
-        root.right.right = new TreeNode(9);
+//        // 根节点
+//        TreeNode root = new TreeNode(4);
+//        // 第二层
+//        root.left = new TreeNode(2);
+//        root.right = new TreeNode(7);
+//        // 第三层
+//        root.left.left = new TreeNode(1);
+//        root.left.right = new TreeNode(3);
+//        root.right.left = new TreeNode(6);
+//        root.right.right = new TreeNode(9);
+
+        Integer[] numsList = new Integer[]{4,2,7,1,3,6,9};
+        TreeNode root = TreeNode.createTreeFromArray(numsList);
 
         Solution solution = new Solution();
 //        solution.invertTree(null);
