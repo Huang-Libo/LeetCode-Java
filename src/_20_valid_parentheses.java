@@ -11,31 +11,33 @@ import java.util.Stack;
  *
  * https://leetcode-cn.com/problems/valid-parentheses/
  */
-public class LeetCode_20_valid_parentheses {
+public class _20_valid_parentheses {
     public static void main(String[] args) {
-        LeetCode_20_valid_parentheses leetCode_20_valid_parentheses = new LeetCode_20_valid_parentheses();
         String str = "{[]}";
-        System.out.println(leetCode_20_valid_parentheses.isValid(str));
+        Solution solution = new Solution();
+        System.out.println(solution.isValid(str));
     }
 
-    // 方法一：使用栈
-    public boolean isValid(String s) {
-        Stack<Character> stack = new Stack();
-        for (int i = 0; i < s.length(); i++) {
-            char ch = s.charAt(i);
-            if (ch == '{' || ch == '[' || ch =='(') {
-                stack.push(ch);
-            } else {
-                if (stack.size() == 0) return false;
-                char top = stack.pop();
-                if ((ch == '}' && top == '{') || (ch == ']' && top == '[') || (ch == ')' && top == '(')) {
-                    continue;
+    public static class Solution {
+        // 方法一：使用栈
+        public boolean isValid(String s) {
+            Stack<Character> stack = new Stack();
+            for (int i = 0; i < s.length(); i++) {
+                char ch = s.charAt(i);
+                if (ch == '{' || ch == '[' || ch =='(') {
+                    stack.push(ch);
                 } else {
-                    return false;
+                    if (stack.size() == 0) return false;
+                    char top = stack.pop();
+                    if ((ch == '}' && top == '{') || (ch == ']' && top == '[') || (ch == ')' && top == '(')) {
+                        continue;
+                    } else {
+                        return false;
+                    }
                 }
             }
+            return stack.isEmpty();
         }
-        return stack.isEmpty();
     }
 
     // 方法二：贴一个网友用 python 写的代码（从代码层面上来说很有创意；如果考虑时间复杂度，可能不太好）
