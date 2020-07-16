@@ -7,7 +7,7 @@
  *
  * https://leetcode-cn.com/problems/powx-n/
  */
-public class LeetCode_50_powx_n {
+public class _50_powx_n {
     public static void main(String[] args) {
         double x = 2.0;
         int n = -10;
